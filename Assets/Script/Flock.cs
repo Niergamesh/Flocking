@@ -56,7 +56,7 @@ public class Flock : MonoBehaviour
         foreach(FlockAgent agent in agents)
         {
             List<Transform> context = GetNearbyObjects(agent);
-            agent.food =GetNearbyFood(agent);
+            agent.food = GetNearbyFood(agent);
             Vector3 move = behavior.CalculateMove(agent, context, this);
             move *= driveFactor;
             if (move.magnitude > MaxSpeedMagnitude)

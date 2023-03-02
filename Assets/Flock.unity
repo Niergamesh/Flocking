@@ -132,11 +132,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8259067596270374126, guid: 380e869112d5086468a3a3992e91109d, type: 3}
       propertyPath: m_Drag
-      value: 0
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -8259067596270374126, guid: 380e869112d5086468a3a3992e91109d, type: 3}
       propertyPath: m_Mass
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -8259067596270374126, guid: 380e869112d5086468a3a3992e91109d, type: 3}
       propertyPath: m_UseGravity
@@ -164,7 +164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4622948576541377396, guid: 380e869112d5086468a3a3992e91109d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4622948576541377396, guid: 380e869112d5086468a3a3992e91109d, type: 3}
       propertyPath: m_TagString
@@ -188,15 +188,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8535265655307596135, guid: 380e869112d5086468a3a3992e91109d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.12
+      value: -5.3
       objectReference: {fileID: 0}
     - target: {fileID: 8535265655307596135, guid: 380e869112d5086468a3a3992e91109d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -4.1
       objectReference: {fileID: 0}
     - target: {fileID: 8535265655307596135, guid: 380e869112d5086468a3a3992e91109d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -41.7
+      value: -59
       objectReference: {fileID: 0}
     - target: {fileID: 8535265655307596135, guid: 380e869112d5086468a3a3992e91109d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -304,14 +304,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 417866444}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.3, z: -65.22}
+  m_LocalRotation: {x: 0.13700384, y: -0, z: -0, w: 0.9905705}
+  m_LocalPosition: {x: 0, y: 28.3, z: -92.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 15.749, y: 0, z: 0}
 --- !u!1 &510660549
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,7 +331,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &510660550
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -419,7 +419,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 510660549}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.25, y: -0.5, z: 3.18}
+  m_LocalPosition: {x: 5.25, y: -11.9, z: 3.18}
   m_LocalScale: {x: 2.4295912, y: 69.05833, z: 3.4474792}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -582,9 +582,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03fb16e2d035a6c4188bca0c13f39997, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 500
-  Dtime: 0.3
-  speed: 3
+  force: 5000
+  Dtime: 0.4
+  speed: 2
   neighborRadius: 1000
 --- !u!4 &754951559 stripped
 Transform:
@@ -603,11 +603,11 @@ GameObject:
   - component: {fileID: 770078523}
   m_Layer: 0
   m_Name: Food of Flock agent
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &770078523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -621,7 +621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodPrefeb: {fileID: -2786139362722121965, guid: 671c4fa4a8a1f2f4f8aa101ce24dafea, type: 3}
-  startingCount: 3000
+  startingCount: 500
 --- !u!4 &770078524
 Transform:
   m_ObjectHideFlags: 0
@@ -649,7 +649,7 @@ GameObject:
   - component: {fileID: 866279072}
   m_Layer: 0
   m_Name: Flock
-  m_TagString: Untagged
+  m_TagString: Fagent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -668,7 +668,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentPrefeb: {fileID: -3056197396893524095, guid: e77b7e344112b5f4c8d708dc75ad5c16, type: 3}
   behavior: {fileID: 11400000, guid: b21eea1d6e9398b44aaf1cf38b64629f, type: 2}
-  startingCount: 500
+  startingCount: 10
   driveFactor: 5
   maxSpeed: 15
   neighborRadius: 5.25
@@ -884,7 +884,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &1974657432
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -972,7 +972,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1974657431}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.61, y: -0.5, z: 15.86}
+  m_LocalPosition: {x: -9.61, y: -12.1, z: 15.86}
   m_LocalScale: {x: 2.4295912, y: 69.05833, z: 3.4474792}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -998,7 +998,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &2121911896
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1086,7 +1086,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2121911895}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.14, y: -0.5, z: -6.35}
+  m_LocalPosition: {x: -10.14, y: -20.4, z: -6.35}
   m_LocalScale: {x: 2.4295912, y: 69.05833, z: 3.4474792}
   m_ConstrainProportionsScale: 0
   m_Children: []

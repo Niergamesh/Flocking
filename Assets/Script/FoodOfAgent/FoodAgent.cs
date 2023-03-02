@@ -5,7 +5,7 @@ using UnityEngine;
 public class FoodAgent : MonoBehaviour
 {
     Food agentFood;
-    List<FoodAgent> agent1;
+    List<FoodAgent> agent2;
     public Food AgentFood { get { return agentFood; } }
 
     SphereCollider agentCollider;
@@ -19,7 +19,7 @@ public class FoodAgent : MonoBehaviour
     public void Initialize(Food food, List<FoodAgent> b)
     {
         agentFood = food;
-        agent1 = b;
+        agent2 = b;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -28,7 +28,7 @@ public class FoodAgent : MonoBehaviour
         {
             Destroy(gameObject);
 
-            agent1.Remove(this);
+            agent2.Remove(this);
         }
     }
 

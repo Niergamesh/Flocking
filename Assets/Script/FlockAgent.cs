@@ -12,7 +12,7 @@ public class FlockAgent : MonoBehaviour
     public Flock AgentFlock { get { return agentFlock; } }
 
     SphereCollider agentCollider;
-    [SerializeField] private float rotationSpeed;
+    
 
     public SphereCollider AgentCollider { get{ return agentCollider; } }
     void Start()
