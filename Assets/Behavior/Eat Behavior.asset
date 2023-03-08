@@ -13,5 +13,3 @@ MonoBehaviour:
   m_Name: Eat Behavior
   m_EditorClassIdentifier: 
   filter: {fileID: 0}
-  neighborRadius: 2
-  min_Dist: 0

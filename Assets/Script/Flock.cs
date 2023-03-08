@@ -22,6 +22,7 @@ public class Flock : MonoBehaviour
     [Range(0f, 1f)]
     public float avoidanceRadiusMultiplier = 0.5f;
 
+    [SerializeField] private float foodDistance = 1;
 
     float MaxSpeedMagnitude;
     float squareNeighborRadius;
@@ -85,7 +86,7 @@ public class Flock : MonoBehaviour
     List<Transform> GetNearbyFood(FlockAgent agent)
     {
         List<Transform> context = new List<Transform>();
-        Collider[] contextColliders = Physics.OverlapSphere(agent.transform.position, neighborRadius);
+        Collider[] contextColliders = Physics.OverlapSphere(agent.transform.position, foodDistance);
         foreach (Collider c in contextColliders)
         {
             if (c.CompareTag("Food"))

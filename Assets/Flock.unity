@@ -621,7 +621,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodPrefeb: {fileID: -2786139362722121965, guid: 671c4fa4a8a1f2f4f8aa101ce24dafea, type: 3}
+  xOffset: 10
+  yOffset: 10
   startingCount: 500
+  AgentDensity: 0.01
 --- !u!4 &770078524
 Transform:
   m_ObjectHideFlags: 0
@@ -668,11 +671,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentPrefeb: {fileID: -3056197396893524095, guid: e77b7e344112b5f4c8d708dc75ad5c16, type: 3}
   behavior: {fileID: 11400000, guid: b21eea1d6e9398b44aaf1cf38b64629f, type: 2}
-  startingCount: 10
+  startingCount: 200
   driveFactor: 5
   maxSpeed: 15
-  neighborRadius: 5.25
+  neighborRadius: 1.5
   avoidanceRadiusMultiplier: 1
+  foodDistance: 10
 --- !u!4 &866279073
 Transform:
   m_ObjectHideFlags: 0
@@ -681,7 +685,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 866279071}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 27.686428, y: -2.0849943, z: -19.52757}
+  m_LocalPosition: {x: 47.7, y: -2.0849943, z: -66.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

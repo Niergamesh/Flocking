@@ -6,12 +6,13 @@ public class Food : MonoBehaviour
 {
     public FoodAgent foodPrefeb;
     List<FoodAgent> agents = new List<FoodAgent>();
-    
+    [SerializeField] private float xOffset;
+    [SerializeField] private float yOffset;
 
-    [Range(500, 3000)]
-    public int startingCount = 500;
+    [Range(50, 3000)]
+    public int startingCount = 50;
 
-    const float AgentDensity = 0.01f;
+    public float AgentDensity = 0.001f;
 
     void Start()
     {
@@ -19,7 +20,7 @@ public class Food : MonoBehaviour
         {
             FoodAgent newAgent = Instantiate(
             foodPrefeb,
-                Random.insideUnitSphere * startingCount * AgentDensity,
+                Random.insideUnitSphere * startingCount * AgentDensity + new Vector3(xOffset, yOffset, 0),
                 new Quaternion(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f),
                 Random.Range(0f, 360f)),
                 transform

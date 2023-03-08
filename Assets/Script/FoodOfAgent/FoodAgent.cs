@@ -26,6 +26,7 @@ public class FoodAgent : MonoBehaviour
     {
         if (other.CompareTag("Fagent"))
         {
+            Debug.Log("Food Destroyed: " + gameObject.name);
             Destroy(gameObject);
 
             agent2.Remove(this);
